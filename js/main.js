@@ -5,16 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             if (href.startsWith('index.html#')) {
-                // Handle navigation to index.html
+                // Handle navigation to index.html sections
                 e.preventDefault();
                 window.location.href = href;
             } else if (href === 'index.html') {
-                // Handle scroll to top
+                // Handle scroll to top of index.html
                 e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                if (window.location.pathname !== '/index.html') {
+                    window.location.href = 'index.html';
+                } else {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
             } else {
                 // Handle internal smooth scrolling
                 e.preventDefault();
