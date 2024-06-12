@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Crooked Credenza</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"></head>
 <body>
     <header>
         <div class="container">
-            <h1>The Crooked Credenza</h1>
+            <h1><a href="index.html">The Crooked Credenza</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
+    
     <section id="main" class="main-section">
         <div class="container">
             <div class="photo-tile left">
@@ -31,6 +32,7 @@
             <div class="main-image">
                 <h2>The Crooked Credenza</h2>
                 <p>Your tagline or description here.</p>
+                <a href="#portfolio" class="cta-button">Explore Our Work</a>
             </div>
             <div class="photo-tile right">
                 <img src="images/side3.jpg" alt="Side Image 3">
@@ -51,13 +53,77 @@
         <div class="container">
             <h2>Portfolio</h2>
             <div class="portfolio-grid">
-                <!-- Add your project images here -->
-                <div class="portfolio-item"><img src="images/project1.jpg" alt="Project 1"></div>
-                <div class="portfolio-item"><img src="images/project2.jpg" alt="Project 2"></div>
-                <div class="portfolio-item"><img src="images/project3.jpg" alt="Project 3"></div>
-                <div class="portfolio-item"><img src="images/project4.jpg" alt="Project 4"></div>
-                <div class="portfolio-item"><img src="images/project5.jpg" alt="Project 5"></div>
-                <div class="portfolio-item"><img src="images/project6.jpg" alt="Project 6"></div>
+                <!-- Project 1 -->
+                <a href="project1.html" class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Modern Eclectic Living Room</h3>
+                        <img src="images/project1.jpg" alt="Project 1">
+                        <p>Brief description of Project 1.</p>
+                    </div>
+                </a>
+                <!-- Project 2 -->
+                <a href="project2.html" class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Project Title 2</h3>
+                        <img src="images/project2.jpg" alt="Project 2">
+                        <p>Brief description of Project 2.</p>
+                    </div>
+                </a>
+                <!-- Project 3 -->
+                <a href="project3.html" class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Project Title 3</h3>
+                        <img src="images/project3.jpg" alt="Project 3">
+                        <p>Brief description of Project 3.</p>
+                    </div>
+                </a>
+                <!-- Project 4 -->
+                <a href="project4.html" class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Project Title 4</h3>
+                        <img src="images/project4.jpg" alt="Project 4">
+                        <p>Brief description of Project 4.</p>
+                    </div>
+                </a>
+                <!-- Project 5 -->
+                <a href="project5.html" class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Project Title 5</h3>
+                        <img src="images/project5.jpg" alt="Project 5">
+                        <p>Brief description of Project 5.</p>
+                    </div>
+                </a>
+                <!-- Project 6 -->
+                <a href="project6.html" class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3>Project Title 6</h3>
+                        <img src="images/project6.jpg" alt="Project 6">
+                        <p>Brief description of Project 6.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Personalized Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Interior Design</h3>
+                    <p>Transform your space with bespoke interior design services tailored to your unique style and needs.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Renovation</h3>
+                    <p>Expert renovation services to bring new life to your home, from concept to completion.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-couch"></i>
+                    <h3>Furniture Selection</h3>
+                    <p>Handpicked furniture and decor to perfectly complement your space and personal taste.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -69,8 +135,7 @@
                 <!-- Placeholder for Brian's photo -->
                 <img src="images/brian.jpg" alt="Brian">
                 <div class="about-text">
-                    <p>Brian is an experienced interior designer with a passion for creating eclectic yet tasteful spaces. With a keen eye for detail and a unique design philosophy, Brian transforms any space into a work of art.</p>
-                </div>
+                    <p>Brian is an experienced interior designer with a passion for creating eclectic yet tasteful spaces. With a keen eye for detail and a unique design philosophy, Brian transforms any space into a work of art. His personalized approach ensures each project reflects the client's individual style and preferences.</p>                </div>
             </div>
         </div>
     </section>

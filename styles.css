@@ -1,5 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     margin: 0;
     padding: 0;
     color: #4A4A4A; /* Dark gray text color */
@@ -16,11 +22,23 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
+}
+
+header h1 a {
+    color: #FFFFFF; /* White text color */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+header h1 a:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    text-decoration: none; /* Ensure underline is not shown on hover */
 }
 
 nav ul {
@@ -37,6 +55,12 @@ nav ul li {
 nav ul li a {
     color: #FFFFFF; /* White text color for links */
     text-decoration: none;
+    padding: 5px 10px;
+    transition: transform 0.3s; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .main-section {
@@ -45,6 +69,7 @@ nav ul li a {
     justify-content: center;
     height: 800px; /* Fixed height */
     padding: 20px;
+    padding-top: 10px; /* Add some padding to the top */
     background-color: #FAF5EF; /* Light beige background color */
 }
 
@@ -94,6 +119,23 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2C2C2C; /* Dark brown button background */
+    color: #FFFFFF; /* White text color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #4A4A4A; /* Slightly lighter dark brown for hover */
+}
+
 .sub-images-section {
     display: flex;
     justify-content: center;
@@ -139,23 +181,70 @@ nav ul li a {
 .portfolio-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 43px; /* Increased gap between items */
+    gap: 30px; /* Increased gap between items */
 }
 
 .portfolio-item {
     flex: 1 1 calc(33.333% - 30px); /* Adjusted calculation to account for increased gap */
-    height: 350px; /* Increased height */
     background-color: #D7CEC7; /* Light beige-gray placeholder background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    transition: transform 0.3s; /* Add a transition for a hover effect */
 }
 
-.portfolio-item img {
-    max-width: 100%;
-    max-height: 100%;
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.portfolio-content {
+    padding: 20px;
+}
+
+.portfolio-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.portfolio-content img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio-content p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #4A4A4A; /* Dark gray text color */
+}
+
+.services-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.service-item {
+    flex: 1;
+    text-align: center;
+}
+
+.service-item i {
+    font-size: 48px;
+    color: #2C2C2C;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .about-content {
@@ -248,4 +337,23 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+}
+
+/* Project Detail Page */
+
+.project-details {
+    text-align: center;
+}
+
+.project-details img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-details p {
+    font-size: 16px;
+    color: #4A4A4A; /* Dark gray text color */
+    margin-bottom: 20px;
 }
