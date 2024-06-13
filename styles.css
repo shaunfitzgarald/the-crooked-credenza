@@ -46,10 +46,13 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
 }
 
 nav ul li {
     margin-left: 20px;
+    margin-top: 10px; /* Add margin on top to ensure space on wrap */
 }
 
 nav ul li a {
@@ -387,5 +390,18 @@ footer {
 @media (max-width: 768px) and (orientation: landscape) {
     .photo-tile {
         display: flex;
+    }
+}
+
+/* Media query to ensure navbar items wrap underneath on small screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center; /* Center items vertically */
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px; /* Ensure spacing between items */
     }
 }
