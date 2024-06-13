@@ -46,10 +46,13 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
 }
 
 nav ul li {
     margin-left: 20px;
+    margin-top: 10px; /* Add margin on top to ensure space on wrap */
 }
 
 nav ul li a {
@@ -336,7 +339,6 @@ footer {
     color: #FFFFFF; /* White text color */
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
 }
 
 .social-media {
@@ -374,4 +376,49 @@ footer {
     font-size: 16px;
     color: #4A4A4A; /* Dark gray text color */
     margin-bottom: 20px;
+}
+
+/* Media query to hide side images on portrait orientation for small screens */
+@media (max-width: 768px) and (orientation: portrait) {
+    .photo-tile {
+        display: none;
+    }
+
+    /* .portfolio-item h3 {
+        display: none;
+    } */
+
+    .portfolio-item p {
+        display: none;
+    }
+    
+    .portfolio-item {
+        flex: 1 1 100%; /* Make portfolio items take full width */
+        margin-bottom: 10px;
+    }
+
+    .portfolio-content img {
+        height: auto; /* Ensure the images resize correctly */
+        width: 100%; /* Ensure the images take full width */
+    }
+}
+
+/* Media query to show side images on landscape orientation for small screens */
+@media (max-width: 768px) and (orientation: landscape) {
+    .photo-tile {
+        display: flex;
+    }
+}
+
+/* Media query to ensure navbar items wrap underneath on small screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center; /* Center items vertically */
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px; /* Ensure spacing between items */
+    }
 }
