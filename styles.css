@@ -51,10 +51,13 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
 }
 
 nav ul li {
     margin-left: 20px;
+    margin-top: 10px; /* Add margin on top to ensure space on wrap */
 }
 
 nav ul li a {
@@ -341,7 +344,6 @@ footer {
     color: #FFFFFF; /* White text color */
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
 }
 
 .social-media {
@@ -381,23 +383,70 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Media query to hide side images on portrait orientation for small screens */
+/* Media query to center everything in portrait orientation on mobile devices and to hide side images on portrait orientation for small screens */
 @media (max-width: 768px) and (orientation: portrait) {
+    header .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+    }
+
+    .logo {
+        display: block;
+        margin-bottom: 10px; /* Add some space below the logo */
+        max-width: 100px; /* Adjust the size as needed */
+    }
+
+    header h1 {
+        margin: 10px 0; /* Adjust margins */
+        text-align: center; /* Center the header text */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center nav items horizontally */
+        justify-content: center; /* Center nav items vertically */
+        text-align: center; /* Center nav text */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add space between nav items */
+    }
+
+    .main-section .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+    }
+
+    .main-image {
+        margin: 20px 0; /* Add margin to the main image */
+    }
+
     .photo-tile {
         display: none;
     }
 
-    .portfolio-item h3 {
+    /* .portfolio-item h3 {
         display: none;
-    }
+    } */
 
     .portfolio-item p {
         display: none;
     }
+
+    .portfolio-item {
+        flex: 1 1 100%; /* Make portfolio items take full width */
+        margin-bottom: 10px;
+    }
+
+    .portfolio-content img {
+        height: auto; /* Ensure the images resize correctly */
+        width: 100%; /* Ensure the images take full width */
+    }
 }
 
-/* Media query to show side images on landscape orientation for small screens */
-@media (max-width: 768px) and (orientation: landscape) {
+/* Media query to show side images on landscape orientation for small screens */@media (max-width: 768px) and (orientation: landscape) {
     .photo-tile {
         display: flex;
     }
@@ -427,5 +476,11 @@ footer {
 
     nav ul {
         text-align: center;
+    }
+
+    header .logo {
+        height: 50px; /* Ensure the logo size remains the same on mobile */
+        width: auto; /* Maintain the aspect ratio */
+        margin-bottom: 10px; /* Add spacing below the logo if needed */
     }
 }
