@@ -386,8 +386,46 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Media query to hide side images on portrait orientation for small screens */
+/* Media query to center everything in portrait orientation on mobile devices and to hide side images on portrait orientation for small screens */
 @media (max-width: 768px) and (orientation: portrait) {
+    header .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+    }
+
+    .logo {
+        display: block;
+        margin-bottom: 10px; /* Add some space below the logo */
+        max-width: 100px; /* Adjust the size as needed */
+    }
+
+    header h1 {
+        margin: 10px 0; /* Adjust margins */
+        text-align: center; /* Center the header text */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center nav items horizontally */
+        justify-content: center; /* Center nav items vertically */
+        text-align: center; /* Center nav text */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add space between nav items */
+    }
+
+    .main-section .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+    }
+
+    .main-image {
+        margin: 20px 0; /* Add margin to the main image */
+    }
+                
     .photo-tile {
         display: none;
     }
