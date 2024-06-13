@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <header>
@@ -25,17 +26,16 @@
             </nav>
         </div>
     </header>
-    
+
     <section id="project" class="section">
         <div class="container">
-            <h2>Modern Eclectic Living Room</h2>
+            <h2 data-aos="fade-right">Modern Eclectic Living Room</h2>
             <div class="project-details">
-                <p>This project showcases a modern living room with a mix of eclectic and vintage elements. The design features a cozy seating area with a dark green velvet sofa, a coffee table made of reclaimed wood, and a large area rug with intricate patterns. The gallery wall is filled with framed artwork and photographs, adding a personal touch to the space. Natural light from large windows highlights the rich textures and colors, while plants and decorative accessories add warmth and greenery.</p>
-                <img src="images/project1-detail1.jpg" alt="Project 1 Detail 1">
-                <p>The dark green velvet sofa is the centerpiece of the room, offering both comfort and style. The reclaimed wood coffee table adds a rustic charm, perfectly complementing the vintage elements in the room.</p>
-                <img src="images/project1-detail2.jpg" alt="Project 1 Detail 2">
-                <p>The gallery wall is a curated collection of artwork and photographs, creating a focal point that reflects the client's personality and interests. The large windows allow natural light to flood the room, enhancing the vibrant colors and textures.</p>
-                <!-- Add more images and details as needed -->
+                <p data-aos="fade-right">This project showcases a modern living room with a mix of eclectic and vintage elements. The design features a cozy seating area with a dark green velvet sofa, a coffee table made of reclaimed wood, and a large area rug with intricate patterns. The gallery wall is filled with framed artwork and photographs, adding a personal touch to the space. Natural light from large windows highlights the rich textures and colors, while plants and decorative accessories add warmth and greenery.</p>
+                <img src="images/project1-detail1.jpg" alt="Project 1 Detail 1" data-aos="fade-right">
+                <p data-aos="fade-left">The dark green velvet sofa is the centerpiece of the room, offering both comfort and style. The reclaimed wood coffee table adds a rustic charm, perfectly complementing the vintage elements in the room.</p>
+                <img src="images/project1-detail2.jpg" alt="Project 1 Detail 2" data-aos="fade-right" data-aos-delay="100">
+                <p data-aos="fade-right">The gallery wall is a curated collection of artwork and photographs, creating a focal point that reflects the client's personality and interests. The large windows allow natural light to flood the room, enhancing the vibrant colors and textures.</p>
             </div>
         </div>
     </section>
@@ -51,6 +51,10 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <header>
@@ -26,25 +27,25 @@
         </div>
     </header>
     
-    <section id="main" class="main-section">
+    <section id="main" class="main-section" data-aos="fade-in">
         <div class="container">
-            <div class="photo-tile left">
+            <div class="photo-tile left" data-aos="fade-right">
                 <img src="images/side1.jpg" alt="Side Image 1">
                 <img src="images/side2.jpg" alt="Side Image 2">
             </div>
-            <div class="main-image">
+            <div class="main-image" data-aos="zoom-in">
                 <h2>The Crooked Credenza</h2>
                 <p>Your tagline or description here.</p>
                 <a href="#portfolio" class="cta-button">Explore Our Work</a>
             </div>
-            <div class="photo-tile right">
+            <div class="photo-tile right" data-aos="fade-left">
                 <img src="images/side3.jpg" alt="Side Image 3">
                 <img src="images/side4.jpg" alt="Side Image 4">
             </div>
         </div>
     </section>
 
-    <section id="sub-images" class="sub-images-section">
+    <section id="sub-images" class="sub-images-section" data-aos="fade-up">
         <div class="container">
             <div class="sub-image-item"><img src="images/sub1.jpg" alt="Sub Image 1"></div>
             <div class="sub-image-item"><img src="images/sub2.jpg" alt="Sub Image 2"></div>
@@ -52,12 +53,12 @@
         </div>
     </section>
 
-    <section id="portfolio" class="section">
+    <section id="portfolio" class="section" data-aos="fade-up">
         <div class="container">
             <h2>Portfolio</h2>
             <div class="portfolio-grid">
                 <!-- Project 1 -->
-                <a href="project1.html" class="portfolio-item">
+                <a href="project1.html" class="portfolio-item" data-aos="fade-right">
                     <div class="portfolio-content">
                         <h3>Modern Eclectic Living Room</h3>
                         <img src="images/project1.jpg" alt="Project 1">
@@ -65,7 +66,7 @@
                     </div>
                 </a>
                 <!-- Project 2 -->
-                <a href="project2.html" class="portfolio-item">
+                <a href="project2.html" class="portfolio-item" data-aos="fade-up">
                     <div class="portfolio-content">
                         <h3>Project Title 2</h3>
                         <img src="images/project2.jpg" alt="Project 2">
@@ -73,7 +74,7 @@
                     </div>
                 </a>
                 <!-- Project 3 -->
-                <a href="project3.html" class="portfolio-item">
+                <a href="project3.html" class="portfolio-item" data-aos="fade-left">
                     <div class="portfolio-content">
                         <h3>Project Title 3</h3>
                         <img src="images/project3.jpg" alt="Project 3">
@@ -81,7 +82,7 @@
                     </div>
                 </a>
                 <!-- Project 4 -->
-                <a href="project4.html" class="portfolio-item">
+                <a href="project4.html" class="portfolio-item" data-aos="fade-right">
                     <div class="portfolio-content">
                         <h3>Project Title 4</h3>
                         <img src="images/project4.jpg" alt="Project 4">
@@ -89,7 +90,7 @@
                     </div>
                 </a>
                 <!-- Project 5 -->
-                <a href="project5.html" class="portfolio-item">
+                <a href="project5.html" class="portfolio-item" data-aos="fade-up">
                     <div class="portfolio-content">
                         <h3>Project Title 5</h3>
                         <img src="images/project5.jpg" alt="Project 5">
@@ -97,7 +98,7 @@
                     </div>
                 </a>
                 <!-- Project 6 -->
-                <a href="project6.html" class="portfolio-item">
+                <a href="project6.html" class="portfolio-item" data-aos="fade-left">
                     <div class="portfolio-content">
                         <h3>Project Title 6</h3>
                         <img src="images/project6.jpg" alt="Project 6">
@@ -108,21 +109,21 @@
         </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="services" class="section" data-aos="fade-up">
         <div class="container">
             <h2>Personalized Services</h2>
             <div class="services-grid">
-                <div class="service-item">
+                <div class="service-item" data-aos="fade-right">
                     <i class="fas fa-paint-brush"></i>
                     <h3>Interior Design</h3>
                     <p>Transform your space with bespoke interior design services tailored to your unique style and needs.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item" data-aos="fade-up">
                     <i class="fas fa-hammer"></i>
                     <h3>Renovation</h3>
                     <p>Expert renovation services to bring new life to your home, from concept to completion.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item" data-aos="fade-left">
                     <i class="fas fa-couch"></i>
                     <h3>Furniture Selection</h3>
                     <p>Handpicked furniture and decor to perfectly complement your space and personal taste.</p>
@@ -131,70 +132,71 @@
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section" data-aos="fade-up">
         <div class="container">
             <h2>About</h2>
             <div class="about-content">
                 <!-- Placeholder for Brian's photo -->
-                <img src="images/brian.jpg" alt="Brian">
-                <div class="about-text">
-                    <p>Brian is an experienced interior designer with a passion for creating eclectic yet tasteful spaces. With a keen eye for detail and a unique design philosophy, Brian transforms any space into a work of art. His personalized approach ensures each project reflects the client's individual style and preferences.</p>                </div>
+                <img src="images/brian.jpg" alt="Brian" data-aos="fade-right">
+                <div class="about-text" data-aos="fade-left">
+                    <p>Brian is an experienced interior designer with a passion for creating eclectic yet tasteful spaces. With a keen eye for detail and a unique design philosophy, Brian transforms any space into a work of art. His personalized approach ensures each project reflects the client's individual style and preferences.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="blog" class="section">
+    <section id="blog" class="section" data-aos="fade-up">
         <div class="container">
             <h2>Blog</h2>
             <div class="blog-posts">
                 <!-- Add your blog posts here -->
-                <div class="blog-post">
+                <div class="blog-post" data-aos="zoom-in">
                     <h3>Design Trends 2024</h3>
                     <p>Explore the latest design trends for 2024 and how to incorporate them into your home.</p>
                     <a href="#">Read More</a>
                 </div>
-                <div class="blog-post">
+                <div class="blog-post" data-aos="zoom-in" data-aos-delay="100">
                     <h3>Maximizing Small Spaces</h3>
                     <p>Learn tips and tricks for making the most out of small spaces without sacrificing style.</p>
                     <a href="#">Read More</a>
                 </div>
-                <!-- Add more posts as needed -->
+                <!-- Add more posts with animations as needed -->
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section" data-aos="fade-up">
         <div class="container">
             <h2>Contact</h2>
             <form action="#" method="post">
-                <div class="form-group">
+                <div class="form-group" data-aos="fade-right">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group" data-aos="fade-left">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group" data-aos="fade-right">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" data-aos="zoom-in">Submit</button>
             </form>
         </div>
     </section>
 
-    <section id="testimonials" class="section">
+    <section id="testimonials" class="section" data-aos="fade-up">
         <div class="container">
             <h2>Testimonials</h2>
             <div class="testimonials">
-                <div class="testimonial">
+                <div class="testimonial" data-aos="zoom-in">
                     <p>"Brian's designs transformed our home. We couldn't be happier with the results!" - Jane Doe</p>
                 </div>
-                <div class="testimonial">
+                <div class="testimonial" data-aos="zoom-in" data-aos-delay="100">
                     <p>"The Crooked Credenza brought our vision to life with elegance and creativity." - John Smith</p>
                 </div>
-                <!-- Add more testimonials as needed -->
+                <!-- Add more testimonials with animations as needed -->
             </div>
         </div>
     </section>
@@ -210,6 +212,10 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
