@@ -375,3 +375,17 @@ footer {
     color: #4A4A4A; /* Dark gray text color */
     margin-bottom: 20px;
 }
+
+/* Media query to hide side images on portrait orientation for small screens */
+@media (max-width: 768px) and (orientation: portrait) {
+    .photo-tile {
+        display: none;
+    }
+}
+
+/* Media query to show side images on landscape orientation for small screens */
+@media (max-width: 768px) and (orientation: landscape) {
+    .photo-tile {
+        display: flex;
+    }
+}
