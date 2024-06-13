@@ -339,7 +339,6 @@ footer {
     color: #FFFFFF; /* White text color */
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
 }
 
 .social-media {
@@ -383,6 +382,24 @@ footer {
 @media (max-width: 768px) and (orientation: portrait) {
     .photo-tile {
         display: none;
+    }
+
+    .portfolio-item h3 {
+        display: none;
+    }
+
+    .portfolio-item p {
+        display: none;
+    }
+    
+    .portfolio-item {
+        flex: 1 1 100%; /* Make portfolio items take full width */
+        margin-bottom: 10px;
+    }
+
+    .portfolio-content img {
+        height: auto; /* Ensure the images resize correctly */
+        width: 100%; /* Ensure the images take full width */
     }
 }
 
