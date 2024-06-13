@@ -20,16 +20,21 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the start */
     align-items: center;
     flex-wrap: wrap;
+}
+
+header .logo {
+    height: 50px; /* Adjust this height as needed */
+    margin-right: 15px; /* Add some space between the logo and the title */
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
+    margin-right: auto; /* Push the nav to the right */
 }
-
 header h1 a {
     color: #FFFFFF; /* White text color */
     text-decoration: none; /* Remove underline */
@@ -41,15 +46,18 @@ header h1 a:hover {
     text-decoration: none; /* Ensure underline is not shown on hover */
 }
 
+nav {
+    margin-left: auto; /* Push the nav to the right */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
-    justify-content: center; /* Center items horizontally */
+    justify-content: flex-end; /* Align items to the end */
 }
-
 nav ul li {
     margin-left: 20px;
     margin-top: 10px; /* Add margin on top to ensure space on wrap */
