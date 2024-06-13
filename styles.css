@@ -339,6 +339,24 @@ footer {
     margin-top: 40px;
 }
 
+.social-media {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: #FFFFFF; /* White color for icons */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px; /* Adjust the size of icons */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    color: #F4A261; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
 /* Project Detail Page */
 
 .project-details {
@@ -356,24 +374,4 @@ footer {
     font-size: 16px;
     color: #4A4A4A; /* Dark gray text color */
     margin-bottom: 20px;
-}
-
-/* Social Media Icons */
-
-.social-media {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.social-media a {
-    color: #FFFFFF; /* White color for icons */
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 24px; /* Adjust the size of icons */
-    transition: transform 0.3s, color 0.3s;
-}
-
-.social-media a:hover {
-    color: #F4A261; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
 }
