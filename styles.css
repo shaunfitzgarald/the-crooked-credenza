@@ -25,6 +25,11 @@ header .container {
     flex-wrap: wrap;
 }
 
+header .logo {
+    height: 50px; /* Adjust this height as needed */
+    margin-right: 15px; /* Add some space between the logo and the title */
+}
+
 header h1 {
     margin: 0;
     font-size: 24px;
@@ -46,13 +51,10 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
-    justify-content: center; /* Center items horizontally */
 }
 
 nav ul li {
     margin-left: 20px;
-    margin-top: 10px; /* Add margin on top to ensure space on wrap */
 }
 
 nav ul li a {
@@ -339,6 +341,7 @@ footer {
     color: #FFFFFF; /* White text color */
     text-align: center;
     padding: 20px 0;
+    margin-top: 40px;
 }
 
 .social-media {
@@ -384,22 +387,12 @@ footer {
         display: none;
     }
 
-    /* .portfolio-item h3 {
+    .portfolio-item h3 {
         display: none;
-    } */
+    }
 
     .portfolio-item p {
         display: none;
-    }
-    
-    .portfolio-item {
-        flex: 1 1 100%; /* Make portfolio items take full width */
-        margin-bottom: 10px;
-    }
-
-    .portfolio-content img {
-        height: auto; /* Ensure the images resize correctly */
-        width: 100%; /* Ensure the images take full width */
     }
 }
 
@@ -420,5 +413,19 @@ footer {
     nav ul li {
         margin-left: 0;
         margin-top: 10px; /* Ensure spacing between items */
+    }
+
+    header h1 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        text-align: center;
     }
 }
