@@ -24,7 +24,7 @@
             </nav>
         </div>
     </header>
-    
+
     <section id="project" class="section">
         <div class="container">
             <h2>Modern Eclectic Living Room</h2>
@@ -34,7 +34,6 @@
                 <p>The dark green velvet sofa is the centerpiece of the room, offering both comfort and style. The reclaimed wood coffee table adds a rustic charm, perfectly complementing the vintage elements in the room.</p>
                 <img src="images/project1-detail2.jpg" alt="Project 1 Detail 2">
                 <p>The gallery wall is a curated collection of artwork and photographs, creating a focal point that reflects the client's personality and interests. The large windows allow natural light to flood the room, enhancing the vibrant colors and textures.</p>
-                <!-- Add more images and details as needed -->
             </div>
         </div>
     </section>
@@ -45,6 +44,52 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/simple-parallax-js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const parallaxElements = document.querySelectorAll('[data-simple-parallax]');
+            parallaxElements.forEach(element => {
+                new simpleParallax(element, {
+                    scale: 1.5,
+                    delay: .6,
+                    transition: 'cubic-bezier(0,0,0,1)'
+                });
+            });
+
+            const links = document.querySelectorAll('nav ul li a, header h1 a');
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    if (href.startsWith('index.html#')) {
+                        // Handle navigation to index.html sections
+                        e.preventDefault();
+                        window.location.href = href;
+                    } else if (href === 'index.html') {
+                        // Handle scroll to top of index.html
+                        e.preventDefault();
+                        if (window.location.pathname !== '/index.html') {
+                            window.location.href = 'index.html';
+                        } else {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            });
+                        }
+                    } else {
+                        // Handle internal smooth scrolling
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

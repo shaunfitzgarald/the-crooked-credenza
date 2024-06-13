@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const parallaxElements = document.querySelectorAll('[data-simple-parallax]');
+    parallaxElements.forEach(element => {
+        new simpleParallax(element, {
+            scale: 1.5,
+            delay: .6,
+            transition: 'cubic-bezier(0,0,0,1)'
+        });
+    });
+
     const links = document.querySelectorAll('nav ul li a, header h1 a');
 
     links.forEach(link => {

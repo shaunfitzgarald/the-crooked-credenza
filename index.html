@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Crooked Credenza</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
 <body>
     <header>
         <div class="container">
@@ -26,26 +28,26 @@
     <section id="main" class="main-section">
         <div class="container">
             <div class="photo-tile left">
-                <img src="images/side1.jpg" alt="Side Image 1">
-                <img src="images/side2.jpg" alt="Side Image 2">
+                <img src="images/side1.jpg" alt="Side Image 1" data-simple-parallax="true">
+                <img src="images/side2.jpg" alt="Side Image 2" data-simple-parallax="true">
             </div>
-            <div class="main-image">
+            <div class="main-image" data-simple-parallax="true">
                 <h2>The Crooked Credenza</h2>
                 <p>Your tagline or description here.</p>
                 <a href="#portfolio" class="cta-button">Explore Our Work</a>
             </div>
             <div class="photo-tile right">
-                <img src="images/side3.jpg" alt="Side Image 3">
-                <img src="images/side4.jpg" alt="Side Image 4">
+                <img src="images/side3.jpg" alt="Side Image 3" data-simple-parallax="true">
+                <img src="images/side4.jpg" alt="Side Image 4" data-simple-parallax="true">
             </div>
         </div>
     </section>
 
     <section id="sub-images" class="sub-images-section">
         <div class="container">
-            <div class="sub-image-item"><img src="images/sub1.jpg" alt="Sub Image 1"></div>
-            <div class="sub-image-item"><img src="images/sub2.jpg" alt="Sub Image 2"></div>
-            <div class="sub-image-item"><img src="images/sub3.jpg" alt="Sub Image 3"></div>
+            <div class="sub-image-item"><img src="images/sub1.jpg" alt="Sub Image 1" data-simple-parallax="true"></div>
+            <div class="sub-image-item"><img src="images/sub2.jpg" alt="Sub Image 2" data-simple-parallax="true"></div>
+            <div class="sub-image-item"><img src="images/sub3.jpg" alt="Sub Image 3" data-simple-parallax="true"></div>
         </div>
     </section>
 
@@ -135,7 +137,8 @@
                 <!-- Placeholder for Brian's photo -->
                 <img src="images/brian.jpg" alt="Brian">
                 <div class="about-text">
-                    <p>Brian is an experienced interior designer with a passion for creating eclectic yet tasteful spaces. With a keen eye for detail and a unique design philosophy, Brian transforms any space into a work of art. His personalized approach ensures each project reflects the client's individual style and preferences.</p>                </div>
+                    <p>Brian is an experienced interior designer with a passion for creating eclectic yet tasteful spaces. With a keen eye for detail and a unique design philosophy, Brian transforms any space into a work of art. His personalized approach ensures each project reflects the client's individual style and preferences.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -202,6 +205,52 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/simple-parallax-js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const parallaxElements = document.querySelectorAll('[data-simple-parallax]');
+            parallaxElements.forEach(element => {
+                new simpleParallax(element, {
+                    scale: 1.5,
+                    delay: .6,
+                    transition: 'cubic-bezier(0,0,0,1)'
+                });
+            });
+
+            const links = document.querySelectorAll('nav ul li a, header h1 a');
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    if (href.startsWith('index.html#')) {
+                        // Handle navigation to index.html sections
+                        e.preventDefault();
+                        window.location.href = href;
+                    } else if (href === 'index.html') {
+                        // Handle scroll to top of index.html
+                        e.preventDefault();
+                        if (window.location.pathname !== '/index.html') {
+                            window.location.href = 'index.html';
+                        } else {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            });
+                        }
+                    } else {
+                        // Handle internal smooth scrolling
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
