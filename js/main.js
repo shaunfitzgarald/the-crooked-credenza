@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('nav ul li a, header h1 a');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
 
+    // Add event listener for smooth scrolling
     links.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
@@ -29,6 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
         });
+    });
+
+    // Add event listener for menu toggle
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
     });
 });
