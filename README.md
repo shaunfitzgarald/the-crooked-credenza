@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo2.png" alt="The Crooked Credenza Logo" width="200" height="200">
+  <img src="images/logo2.jpg" alt="The Crooked Credenza Logo" width="200" height="200">
 </p>
 
 # The Crooked Credenza
