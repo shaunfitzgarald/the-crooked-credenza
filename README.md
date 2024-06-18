@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/logo.png" alt="The Crooked Credenza Logo" width="200" height="200">
+</p>
+
 # The Crooked Credenza
 
 Welcome to **The Crooked Credenza** project! This repository houses the code for an eclectic, stylish, and modern interior design website. Our aim is to showcase the best of interior design while providing an engaging user experience.
