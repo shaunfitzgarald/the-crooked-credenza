@@ -99,7 +99,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries or feedback, please reach out to us:
 
-- **Email**: your-email@example.com
+- **Email**: brian@crookedcredenza.com
 - **Facebook**: [Crooked Credenza](https://www.facebook.com/people/Crooked-Credenza/61556984696458/)
 - **Instagram**: [@crookedcredenza](https://www.instagram.com/crookedcredenza/)
 - **Nextdoor**: [The Crooked Credenza](https://www.nextdoor.com)
